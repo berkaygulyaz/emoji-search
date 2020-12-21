@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Search = () => {
+const Search = ({handleKeyUp}) => {
+
+    
+
     return (
-        <input type="text" className="search-input" />
+        <input type="text" placeholder="Search Here..." className="search-input" onKeyUp={(event) => handleKeyUp(event.target.value)} />
     )
 }
 

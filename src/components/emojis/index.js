@@ -1,29 +1,8 @@
 import React from "react";
 
-const Emojis = () => {
+const Emojis = (props) => {
     return (
-        <div className="emojis-wrapper">
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-            <div className="emoji">:)</div>
-        </div>
+        <div className="emoji">{props.symbol}</div>
     )
 }
 
