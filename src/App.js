@@ -13,12 +13,15 @@ function App() {
   
   const [emojis, setEmoji] = useState(EmojiList.slice(first,second));
   const [onHandleSearch, setOnHandleSearch] = useState(false);
-  // const [berkay, setBerkay] = useState(null);
+  const [field, setField] = useState('');
 
   const handleSearch = (e) => {
+    setField(e);
     setOnHandleSearch(e.length > 0);
-  }
+    setEmoji(EmojiList.filter(emoji => emoji.keywords.includes(e)));
 
+    document.querySelector("body").classList.add("berkay")
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,15 +40,13 @@ function App() {
     return () => clearInterval(interval)
   }, [onHandleSearch]);
 
-
-
   return (
     <Container>
       <Search handleKeyUp={(value) => handleSearch(value)} />
       <div className="emojis-wrapper">
         {
           emojis.map(emoji => (
-            <Emojis name={emoji.title} symbol={emoji.symbol} key={emoji.title} />
+            <Emojis name={emoji.title} symbol={emoji.symbol} keyword={emoji.keywords} key={emoji.title} />
           ))
         }
       </div>
