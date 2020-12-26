@@ -19,8 +19,7 @@ function App() {
     setField(e);
     setOnHandleSearch(e.length > 0);
     setEmoji(EmojiList.filter(emoji => emoji.keywords.includes(e)));
-
-    document.querySelector("body").classList.add("berkay")
+    
   }
 
   useEffect(() => {
@@ -46,8 +45,8 @@ function App() {
       <div className="emojis-wrapper">
         {
           emojis.map(emoji => (
-            <Emojis name={emoji.title} symbol={emoji.symbol} keyword={emoji.keywords} key={emoji.title} />
-          ))
+            <Emojis name={emoji.title} symbol={emoji.symbol} keyword={emoji.keywords} key={emoji.title}/>
+          )).slice(0, 100)
         }
       </div>
     </Container>
