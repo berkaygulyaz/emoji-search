@@ -1,9 +1,9 @@
 import React from "react";
 
-const Emojis = (props) => {
+const Emojis = ({symbol, onItemClick}) => {
 
     return (
-        <div className="emoji">{props.symbol}</div>
+        <div className="emoji" onClick={onItemClick}>{symbol}</div>
     )
 }
 

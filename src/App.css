@@ -1,59 +1,83 @@
 body {
   background-color: #bfeae9;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
 }
 
-#root {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+#search-wrapper {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 }
 
 .container {
-  width: 960px;
-  position: relative;
   margin: 0 auto;
+  position: relative;
+  width: 960px;
 }
 
 .search-input {
-  font-family: 'Nunito', sans-serif;
-  width: 100%;
-  padding: 10px 0px 10px 10px;
-  font-size: 20px;
   border-radius: 30px;
   border: 2px solid #dee2e6;
-  outline: 0;
   box-shadow: inset 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
   color: #495057;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  outline: 0;
+  padding: 10px 0px 10px 10px;
+  width: 100%;
 }
 
 
 .emojis-wrapper {
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 10px;
   justify-content: center;
-  align-items: center;
+  margin-top: 10px;
 }
 
 .emojis-wrapper .emoji {
-  width: 60px;
-  height: 60px;
   background-color: #fff;
-  text-align: center;
-  line-height: 63px;
   border-radius: 100%;
-  cursor: pointer;
+  border: none;
   box-shadow: inset 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
-  margin: 10px;
+  cursor: pointer;
   font-size: 25px;
+  height: 60px;
+  line-height: 63px;
+  margin: 10px;
+  outline: 0;
+  text-align: center;
   transition: all .3s;
+  width: 60px;
 }
 
 .emojis-wrapper .emoji:hover {
   font-size: 30px;
+}
+
+.message-wrapper {
+  display: inline-block;
+  height: 100vh;
+  line-height: 100vh;
+  position: absolute;
+  text-align: center;
+  transition: all .3s;
+  width: 100%;
+}
+
+.message-wrapper p {
+  background-color: #00008b ;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  height: 100px;
+  line-height: 100px;
+  width: 400px;
 }
